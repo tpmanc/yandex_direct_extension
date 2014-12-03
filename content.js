@@ -9,6 +9,7 @@ function actionController(){
 		checkAll();
 	}
 }
+checkAll();
 var ind = 0;
 /* кнопка уточнить в яндекс директе */
 function clarify(){

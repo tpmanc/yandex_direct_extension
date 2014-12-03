@@ -24,8 +24,10 @@ chrome.extension.onRequest.addListener(
 			break;
 			case "enable":
 				localStorage['enable'] = true;
+				alert('on');
 			break;
 			case "disable":
+				alert('off');
 				localStorage['enable'] = false;
 			break;
 		}
