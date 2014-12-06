@@ -11,7 +11,7 @@ function callClarify(){
 }
 
 function callCheckAll(id){
-	if( localStorage['enable'] === true ){
+	if( localStorage['enable'] === 1 ){
 		chrome.tabs.sendMessage(id, {cmd: "checkAll"}, function(response) {});
 	}
 }
@@ -22,13 +22,11 @@ chrome.extension.onRequest.addListener(
 			case "callClarify":
 				callClarify();
 			break;
-			case "enable":
-				localStorage['enable'] = true;
-				alert('on');
+			case "enable":alert(1)
+				localStorage['enable'] = 1;
 			break;
-			case "disable":
-				alert('off');
-				localStorage['enable'] = false;
+			case "disable":alert(0)
+				localStorage['enable'] = 0;
 			break;
 		}
 	}
@@ -47,4 +45,3 @@ chrome.extension.onMessage.addListener(
 		}
 	}
 )
-

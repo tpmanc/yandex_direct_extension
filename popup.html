@@ -1,14 +1,61 @@
 <html>
 	<head>
 		<title>Yandex Директ</title>
+		<style>
+.sun-flower-button.on{
+  position: relative;
+  vertical-align: top;
+  width: 100%;
+  height: 60px;
+  padding: 0;
+  font-size: 22px;
+  color: white;
+  text-align: center;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+  background: #79d174;
+  border: 0;
+  border-bottom: 2px solid #549c50;
+  cursor: pointer;
+  -webkit-box-shadow: inset 0 -2px #549c50;
+  box-shadow: inset 0 -2px #549c50;
+}
+.sun-flower-button.on:active {
+  top: 1px;
+  outline: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.sun-flower-button.off{
+  position: relative;
+  vertical-align: top;
+  width: 100%;
+  height: 60px;
+  padding: 0;
+  font-size: 22px;
+  color: white;
+  text-align: center;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+  background: #f0f565;
+  border: 0;
+  border-bottom: 2px solid #d6db4a;
+  cursor: pointer;
+  -webkit-box-shadow: inset 0 -2px #d6db4a;
+  box-shadow: inset 0 -2px #d6db4a;
+}
+.sun-flower-button.off:active {
+  top: 1px;
+  outline: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+		</style>
 	</head>
 	<body>
 		<h1>Yandex Директ</h1>
 
 		<div>
 			<h3>Уточнить все</h3> <br />
-			<input type='button' value='Включить' id='enable' />
-			<input type='button' value='Выключить' id='disable' />
+			<input type='button' class='sun-flower-button on' value='Включить' id='enable' />
 		</div>
 	</body>
 	<script src="popup.js" type="text/javascript"></script>

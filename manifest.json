@@ -12,7 +12,7 @@
 		"scripts": ["background.js"]
 	},
 	"permissions": [      // разрешения
-	    "tabs","https://direct.yandex.ru/*"
+	    "tabs","https://direct.yandex.ru/*","storage"
 	],
 	"browser_action": {
         "default_title": "LostTime",
