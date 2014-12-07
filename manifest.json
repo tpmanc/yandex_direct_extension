@@ -1,6 +1,6 @@
 {
 	"manifest_version": 2,
-	"name": "Yandex Direct",
+	"name": "Ease my pain",
 	"version": "1.0",
 	"icons": {
 		"16": "icon16.png",
@@ -20,7 +20,7 @@
 	    "tabs","https://direct.yandex.ru/*","storage"
 	],
 	"browser_action": {
-        "default_title": "Yandex Direct",
+        "default_title": "Ease my pain",
         "default_popup": "popup.html"
     }
 }
