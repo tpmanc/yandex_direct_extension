@@ -20,7 +20,7 @@
 	    "tabs","https://direct.yandex.ru/*","storage"
 	],
 	"browser_action": {
-        "default_title": "LostTime",
+        "default_title": "Yandex Direct",
         "default_popup": "popup.html"
     }
 }

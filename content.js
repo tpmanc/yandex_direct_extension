@@ -11,6 +11,7 @@ function actionController(){
 }
 checkAll();
 var ind = 0;
+
 /* кнопка уточнить в яндекс директе */
 function clarify(){
 	var table = document.getElementById("result_table");
@@ -21,9 +22,6 @@ function clarify(){
 	if( ind < elems.length ){
 		setTimeout(clickLink, 1100);
 	}
-	// for(var i=0; i<elems.length; i++){
-	// 	document.getElementById("ahref_specify_"+i).click();
-	// }
 }
 
 function checkAll(){
