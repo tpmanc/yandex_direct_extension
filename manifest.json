@@ -16,7 +16,7 @@
 		"background": {
 		"scripts": ["background.js"]
 	},
-	"permissions": [      // разрешения
+	"permissions": [
 	    "tabs","https://direct.yandex.ru/*","storage"
 	],
 	"browser_action": {
