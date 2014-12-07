@@ -1,4 +1,6 @@
-chrome.extension.sendMessage({cmd: "tab_add"}, function(response) {}); // отправляем сообщение ОУМу
+// chrome.extension.sendMessage({cmd: "tab_add"}, function(response) {}); // отправляем сообщение ОУМу
+chrome.extension.sendMessage({cmd: "checkAllQuery"}, function(response) {});
+
 chrome.extension.onMessage.addListener(actionController);
 
 function actionController(){
@@ -9,7 +11,7 @@ function actionController(){
 		checkAll();
 	}
 }
-checkAll();
+// checkAll();
 var ind = 0;
 
 /* кнопка уточнить в яндекс директе */
@@ -25,19 +27,24 @@ function clarify(){
 }
 
 function checkAll(){
-	document.getElementById("select_all").click();
-	setTimeout(function(){
-		var arr = document.getElementById('footer').getElementsByTagName('input');
-		for(var i=0; i<arr.length; i++){
-			if( arr[i].value=="Применить" ){
-				arr[i].click();
-				break;
-			}
-		}
+	var checkBtn = document.getElementById("select_all");
+	if( checkBtn != undefined ){
+		checkBtn.click()
 		setTimeout(function(){
-			close();
+			var arr = document.getElementById('footer').getElementsByTagName('input');
+			for(var i=0; i<arr.length; i++){
+				if( arr[i].value=="Применить" ){
+					arr[i].click();
+					break;
+				}
+			}
+			setTimeout(function(){
+				close();
+			}, 300);
 		}, 300);
-	}, 300);
+	}else{
+		console.log('not found');
+	}
 }
 
 function clickLink(){

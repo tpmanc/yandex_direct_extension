@@ -33,15 +33,19 @@ chrome.extension.onRequest.addListener(
 );
 chrome.extension.onMessage.addListener(
 	function(request, sender, send_response) {
-		if (request.cmd == "tab_add") { // Ответ от content.js
-			if(main_tab == 0 && tab_id.length == 0){
-				main_tab = sender.tab.id;
-				alert('main');
-			}else{
-				extra_tabs.push(sender.tab.id);
-				callCheckAll(sender.tab.id);
+		if (request.cmd == "tab_add") {
+			// if(main_tab == 0 && tab_id.length == 0){
+				// main_tab = sender.tab.id;
+				// alert('main');
+			// }else{
+				// extra_tabs.push(sender.tab.id);
+				// callCheckAll(sender.tab.id);
+			// }
+    		// tab_id.push(sender.tab.id);
+		}else if( request.cmd == "checkAllQuery" ){
+			if( localStorage['enable'] == 1 ){
+				chrome.tabs.sendMessage(sender.tab.id, {cmd: "checkAll"}, function(response) {});
 			}
-    		tab_id.push(sender.tab.id);
 		}
 	}
 )
