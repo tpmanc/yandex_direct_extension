@@ -22,10 +22,10 @@ chrome.extension.onRequest.addListener(
 			case "callClarify":
 				callClarify();
 			break;
-			case "enable":alert(1)
+			case "enable":
 				localStorage['enable'] = 1;
 			break;
-			case "disable":alert(0)
+			case "disable":
 				localStorage['enable'] = 0;
 			break;
 		}
